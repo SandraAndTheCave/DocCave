@@ -1,0 +1,7 @@
+{78114302-dd49-4430-aef6-e0725c3cb84b} bank:/Master
+{e00c63d6-ac32-0872-28bf-6a8cadcfbed3} bank:/Master.strings
+{4d9a4413-c671-4d57-a0b7-51ff837b7dc7} bus:/
+{c8cc7089-8371-4ee9-a0ac-f5c790133035} bus:/Reverb
+{028494d5-1b4d-4353-912c-474e9381bba9} event:/musicContinous
+{a5768f1e-b171-452e-b98b-9f28ec8107db} parameter:/Jump
+{3b11c196-e85e-4c9c-8e14-f02c2c9ec829} parameter:/TunnelVolPar1

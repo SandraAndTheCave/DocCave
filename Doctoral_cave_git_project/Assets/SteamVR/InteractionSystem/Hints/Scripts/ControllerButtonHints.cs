@@ -93,6 +93,7 @@ namespace Valve.VR.InteractionSystem
         //-------------------------------------------------
         void Awake()
 		{
+			
 			renderModelLoadedAction = SteamVR_Events.RenderModelLoadedAction( OnRenderModelLoaded );
 
 #if UNITY_URP
@@ -101,6 +102,7 @@ namespace Valve.VR.InteractionSystem
 			colorID = Shader.PropertyToID( "_Color" );
 #endif
 		}
+
 
 
 		//-------------------------------------------------
