@@ -5,6 +5,8 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR;
+using System.Collections;
+
 
 namespace Valve.VR
 {
@@ -69,8 +71,10 @@ namespace Valve.VR
         protected SteamVR_HistoryBuffer historyBuffer = new SteamVR_HistoryBuffer(30);
 
 
+
         protected virtual void Start()
         {
+           
             if (poseAction == null)
             {
                 Debug.LogError("<b>[SteamVR]</b> No pose action set for this component", this);
@@ -259,5 +263,9 @@ namespace Valve.VR
         public delegate void ValidPoseChangeHandler(SteamVR_Behaviour_Pose fromAction, SteamVR_Input_Sources fromSource, bool validPose);
         public delegate void DeviceConnectedChangeHandler(SteamVR_Behaviour_Pose fromAction, SteamVR_Input_Sources fromSource, bool deviceConnected);
         public delegate void DeviceIndexChangedHandler(SteamVR_Behaviour_Pose fromAction, SteamVR_Input_Sources fromSource, int newDeviceIndex);
+
+        private class yield
+        {
+        }
     }
 }
