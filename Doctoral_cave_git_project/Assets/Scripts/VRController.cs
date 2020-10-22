@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
+
 public class VRController : MonoBehaviour
 {
     public float m_Sensitivity = 0.1f;
     public float m_MaxSpeed = 1.0f;
 
+    
+
     public SteamVR_Action_Boolean m_MovePress = null;
-    public ISteamVR_Action_Vector2 m_MoveValue = null;
+    public SteamVR_Action_Vector2 m_MoveValue = null;
+
 
     private float m_Speed = 0.0f;
     private CharacterController m_CharacterController = null;
     private Transform m_CameraRig = null;
     private Transform m_Head = null;
 
+
+
     private void Awake()
-    {
+    { 
         m_CharacterController = GetComponent<CharacterController>();
     }
 
@@ -25,6 +31,9 @@ public class VRController : MonoBehaviour
     {
         m_CameraRig = SteamVR_Render.Top().origin;
         m_Head = SteamVR_Render.Top().head;
+ 
+
+
     }
 
     private void Update()
@@ -49,12 +58,12 @@ public class VRController : MonoBehaviour
     private void CalculateMovement()
     {
         //figure out movement orientation
-        Vector3 orientationEuler = new Vector3(0, transform.eulerAngles.y,0);
+        Vector3 orientationEuler = new Vector3(0, transform.eulerAngles.y, 0);
         Quaternion orientation = Quaternion.Euler(orientationEuler);
         Vector3 movement = Vector3.zero;
 
         //if not moving
-        if (m_MovePress.GetLastStateUp(SteamVR_Input_Sources.Any))
+        if (m_MovePress.GetStateUp(SteamVR_Input_Sources.Any))
             m_Speed = 0;
 
         //if button pressed
@@ -70,7 +79,10 @@ public class VRController : MonoBehaviour
 
         // Apply
         m_CharacterController.Move(movement);
+       
     }
+
+
     private void HandleHight()
     {
         // Get the head in local space

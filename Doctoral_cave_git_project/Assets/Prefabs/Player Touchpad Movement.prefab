@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hand: 0
-  speed: 1
+  speed: 2
   Head: {fileID: 7252444249292426716}
   Collider: {fileID: 7252578942514037794}
   AxisHand: {fileID: 7252578942513896822}
